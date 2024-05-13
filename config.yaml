@@ -117,3 +117,11 @@ custom_prompts:
     #
     # If left empty, the default OpenAI summary prompt from zep/pkg/extractors/prompts.go will be used.
     openai: |
+        Review the Current Content, if there is one, and the New Lines of the provided conversation. Create a concise summary
+        of the conversation, adding from the New Lines to the Current summary.
+        If the New Lines are meaningless, return the Current Content.
+        Current summary:
+        {{.PrevSummary}}
+        New lines of conversation:
+        {{.MessagesJoined}}
+        New summary:
