@@ -75,9 +75,11 @@ data:
   #  If set to 0 or undefined, hard deletes will not be performed.
   purge_every: 60
 log:
-  level: "info"
+  level: "debug"
 opentelemetry:
   enabled: false
+  endpoint:
+attributes: {}
 # Custom Prompts Configuration
 # Allows customization of extractor prompts.
 custom_prompts:
